@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Гид абитуриента ФКТиПМ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=JetBrains+Mono:wght@400;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">Поступай на ФКТиПМ <small>КубГУ · бакалавриат</small></div>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#check">Шансы</a>
+      <a href="#dirs">Направления</a>
+      <a href="#exams">Экзамены</a>
+      <a href="#dates">Сроки</a>
+      <a href="#new">2027</a>
+      <a href="#faculty">Факультет</a>
+      <a href="#ai">ИИ в подготовке</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section id="check" class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Поступление 2027 · бакалавриат · Краснодар</p>
+    <h1>Хватит ли баллов на <span class="mark">ФКТиПМ</span>?</h1>
+    <p class="lead">Введите баллы ЕГЭ и отметьте достижения. Сравним сумму с проходными баллами на бюджет по всем шести направлениям факультета компьютерных технологий и прикладной математики КубГУ.</p>
+
+    <form class="blank" id="calc" novalidate>
+      <div class="blank-in">
+        <p class="blank-title">Бланк · ваши результаты</p>
+
+        <div class="field">
+          <div class="field-top"><label for="math">Математика (профиль)</label><span class="min">мин. 40</span></div>
+          <div class="field-row">
+            <input class="cells" id="math" type="number" inputmode="numeric" min="0" max="100" value="78" aria-describedby="math-r">
+            <input id="math-r" type="range" min="0" max="100" value="78" aria-label="Математика, ползунок">
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="field-top"><label for="inf">Информатика</label><span class="min">мин. 46</span></div>
+          <div class="field-row">
+            <input class="cells" id="inf" type="number" inputmode="numeric" min="0" max="100" value="80">
+            <input id="inf-r" type="range" min="0" max="100" value="80" aria-label="Информатика, ползунок">
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="field-top"><label for="rus">Русский язык</label><span class="min">мин. 50</span></div>
+          <div class="field-row">
+            <input class="cells" id="rus" type="number" inputmode="numeric" min="0" max="100" value="86">
+            <input id="rus-r" type="range" min="0" max="100" value="86" aria-label="Русский язык, ползунок">
+          </div>
+        </div>
+
+        <fieldset class="ach">
+          <legend>Индивидуальные достижения <span>· в сумме не больше 10</span></legend>
+          <label class="chk"><input type="checkbox" id="a1" data-pts="5" checked> <span>Аттестат с отличием <b>+5</b></span></label>
+          <label class="chk"><input type="checkbox" id="a2" data-pts="5"> <span>Олимпиада КубГУ или «Куб знаний»: победа или призовое место <b>+5</b></span></label>
+          <label class="chk"><input type="checkbox" id="a3" data-pts="5"> <span>Региональный этап Всероссийской олимпиады: победа или призовое место <b>+5</b></span></label>
+          <label class="chk"><input type="checkbox" id="a4" data-pts="2"> <span>Знак ГТО <b>+2</b></span></label>
+          <label class="chk"><input type="checkbox" id="a5" data-pts="2"> <span>Волонтёрство от 100 часов на dobro.ru <b>+2</b></span></label>
+        </fieldset>
+      </div>
+
+      <div class="blank-out" aria-live="polite">
+        <div class="total">
+          <span class="total-num" id="total">249</span>
+          <span class="total-of">из 310</span>
+          <span class="total-break" id="breakdown">ЕГЭ 244 + достижения 5</span>
+        </div>
+        <div class="res" id="results"></div>
+        <p class="note">Черта на шкале — проходной балл на бюджет в 2026 году. <b>Баллы растут:</b> в 2026 году конкурс в КубГУ вырос до 22,1 заявления на место против 17,2 годом раньше, поэтому закладывайте запас 10–15 баллов.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="dirs">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">6 направлений · 13 профилей</p>
+      <h2 class="h2">Куда поступать</h2>
+      <p class="lead">Выберите, что вам ближе, и останутся только подходящие направления. Места и проходные баллы — по приёму 2026 года. Экзамены почти везде одинаковые, поэтому можно подать заявления сразу на несколько.</p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Интересы">
+      <button type="button" data-f="all" aria-pressed="true">Все</button>
+      <button type="button" data-f="ai" aria-pressed="false">ИИ и данные</button>
+      <button type="button" data-f="code" aria-pressed="false">Разработка</button>
+      <button type="button" data-f="math" aria-pressed="false">Математика</button>
+      <button type="button" data-f="econ" aria-pressed="false">IT и экономика</button>
+      <button type="button" data-f="sec" aria-pressed="false">Безопасность</button>
+    </div>
+
+    <div class="dirs" id="dirlist"></div>
+
+  </div>
+</section>
+
+<section id="exams">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Вступительные испытания</p>
+      <h2 class="h2">Что сдавать</h2>
+      <p class="lead">На пять направлений — математика, информатика и русский язык. На «Информационную безопасность» вместо информатики можно сдать физику (минимум 41). Приоритет экзаменов решает, кто выше в списке при равной сумме.</p>
+    </div>
+    <div class="exams">
+      <div class="exam"><span class="prio">Приоритет 1</span><h3>Математика профильная</h3><span class="minbig">40</span><p>минимальный балл</p></div>
+      <div class="exam"><span class="prio">Приоритет 2</span><h3>Информатика</h3><span class="minbig">46</span><p>минимальный балл; на ИБ можно заменить физикой</p></div>
+      <div class="exam"><span class="prio">Приоритет 3</span><h3>Русский язык</h3><span class="minbig">50</span><p>минимальный балл</p></div>
+    </div>
+
+    <div class="split">
+      <div class="box">
+        <h3>Индивидуальные достижения: до +10 к сумме</h3>
+        <table class="ach-table">
+          <tr><td>Аттестат с отличием (в том числе с медалью)</td><td>+5</td></tr>
+          <tr><td>Победа или призовое место на региональном этапе Всероссийской олимпиады в 2025–2026 годах</td><td>+5</td></tr>
+          <tr><td>Победа или призовое место в олимпиаде из перечня Минобрнауки, если не используете её для льгот</td><td>+5</td></tr>
+          <tr><td>Победа или призовое место в олимпиаде КубГУ или конкурсе «Куб знаний» в 2025–2026 годах</td><td>+5</td></tr>
+          <tr><td>Знак ГТО любой степени</td><td>+2</td></tr>
+          <tr><td>Волонтёрство от 100 часов по выписке с dobro.ru</td><td>+2</td></tr>
+        </table>
+        <p class="note">Полный перечень — в правилах приёма КубГУ.</p>
+      </div>
+      <div class="box">
+        <h3>Сколько заявлений можно подать</h3>
+        <p>До <b>5 вузов</b> и до <b>5 направлений</b> в каждом. Направления ставите по приоритету: 1 — самое желанное. Если проходите на несколько, зачислят на то, что выше в вашем списке.</p>
+        <h3>Сколько стоит платное</h3>
+        <p><b>245 700 ₽ в год</b> на первом курсе в 2026/27 учебном году, одинаково для всех направлений факультета. Со второго курса цену индексируют: в 2026 году — на 4%.</p>
+        <h3>Целевое обучение</h3>
+        <p>На некоторых направлениях есть целевые места: больше всего на «Прикладной информатике», 5 мест в 2026 году. Условия — на странице КубГУ о целевом обучении.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dates">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Календарь приёма</p>
+      <h2 class="h2">Главные даты лета</h2>
+      <p class="lead">Ориентир — календарь приёма на бюджет 2026 года. Точные даты на 2027 год появятся в новых правилах приёма КубГУ.</p>
+    </div>
+    <div class="event">
+      <div class="event-date"><b>15</b><span>ноября</span></div>
+      <div class="event-body">
+        <p class="eyebrow">Ближайшее событие</p>
+        <h3>День открытых дверей КубГУ</h3>
+        <p>ФКТиПМ выступает в первом блоке, в 11:00. Главный корпус, актовый зал, ул. Ставропольская, 149. Расскажут о направлениях, по которым будет приём в 2027 году.</p>
+      </div>
+      <a class="event-link" href="https://www.kubsu.ru/ru/node/41712">Подробнее</a>
+    </div>
+    <div class="timeline">
+      <div class="tl"><div class="tl-date">20 июня</div><p>Старт приёма документов через Госуслуги, лично или почтой</p></div>
+      <div class="tl"><div class="tl-date">15 июля</div><p>Последний день, если сдаёте внутренние экзамены КубГУ</p></div>
+      <div class="tl key"><div class="tl-date">25 июля</div><p>Последний день, если поступаете по ЕГЭ, до 17:00 по Москве</p></div>
+      <div class="tl"><div class="tl-date">27 июля</div><p>Публикация конкурсных списков</p></div>
+      <div class="tl key"><div class="tl-date">1 августа</div><p>Согласие на зачисление, приоритетный этап, до 12:00 по Москве. Приказ — 3 августа</p></div>
+      <div class="tl key"><div class="tl-date">5 августа</div><p>Согласие на зачисление, основной этап, до 12:00 по Москве. Приказ — 7 августа</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="new">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Новые правила приёма</p>
+      <h2 class="h2">Что может измениться в 2027 году</h2>
+      <p class="lead">Минобрнауки готовит новые правила приёма. Если их утвердят, они заработают с 1 марта 2027 года и коснутся нынешних одиннадцатиклассников.</p>
+    </div>
+    <div class="changes">
+      <div class="box change">
+        <span class="change-big">+25</span>
+        <h3>За четвёртый ЕГЭ</h3>
+        <p>Дополнительный предмет — математика, физика, химия, информатика или биология — даст +15 баллов за результат от 60, +20 от 75 и +25 от 90, если предмет подходит направлению. Предметы ЕГЭ выбирают до 1 февраля, так что решать нужно уже сейчас.</p>
+      </div>
+      <div class="box change">
+        <span class="change-big">10–11</span>
+        <h3>Олимпиады</h3>
+        <p>Без экзаменов возьмут только победителей олимпиад из перечня и только за 10–11 классы. Призёрам предлагают засчитывать 100 баллов за ЕГЭ по профильному предмету.</p>
+      </div>
+      <div class="box change">
+        <span class="change-big">1 семестр</span>
+        <h3>Платное обучение</h3>
+        <p>Чтобы зачислили на платное место, нужно оплатить хотя бы первый семестр. Платить можно материнским капиталом или образовательным кредитом.</p>
+      </div>
+      <div class="box change">
+        <span class="change-big">4 года</span>
+        <h3>Что останется как было</h3>
+        <p>ЕГЭ — главный экзамен, русский язык обязателен, результаты действуют четыре года, за обычные достижения — до 10 баллов.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faculty">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Факультет компьютерных технологий и прикладной математики</p>
+      <h2 class="h2">Чем живёт факультет</h2>
+    </div>
+    <div class="tiles">
+      <div class="tile"><b>245</b><span>бюджетных мест на бакалавриате в 2026 году</span></div>
+      <div class="tile"><b>31,7</b><span>заявления на бюджетное место в 2025 году</span></div>
+      <div class="tile"><b>81,1</b><span>средний балл ЕГЭ у поступивших на бюджет в 2025 году</span></div>
+      <div class="tile"><b>12</b><span>компьютерных классов в учебно-компьютерном центре</span></div>
+    </div>
+    <div class="facts">
+      <div class="fact"><span class="when">окт 2026</span><div><h3>ICPC: все три призовых места в крае</h3><p>На отборе 1/8 финала команды ФКТиПМ заняли весь пьедестал Краснодарского края, среди них первокурсники.</p></div></div>
+      <div class="fact"><span class="when">окт 2026</span><div><h3>Финал «РуКода» прошёл на факультете</h3><p>Впервые на базе ФКТиПМ — финал международного чемпионата по алгоритмам. От КубГУ выступили 29 команд.</p></div></div>
+      <div class="fact"><span class="when">2026</span><div><h3>Центр искусственного интеллекта</h3><p>В первый год программ КубГУ по ИИ на них учился 301 студент. Среди партнёров — Сбер.</p></div></div>
+      <div class="fact"><span class="when">ежегодно</span><div><h3>День карьеры</h3><p>Приходят IT-компании и банки: С7 ТехЛаб, Т-Банк, Тандер, СимбирСофт, Совкомбанк, Кубань Кредит и другие.</p></div></div>
+      <div class="fact"><span class="when">2026</span><div><h3>Стипендии Президента и Правительства</h3><p>Их получают 9 студентов факультета: больше 18% всех таких стипендиатов КубГУ.</p></div></div>
+      <div class="fact"><span class="when">кафедры</span><div><h3>Пять кафедр</h3><p>Информационных технологий, вычислительных технологий, математического моделирования, анализа данных и ИИ, прикладной математики.</p></div></div>
+    </div>
+    
+    <div class="card">
+      <h3>Стипендии на факультете</h3>
+      <div class="tbl"><table>
+        <thead><tr><th>Стипендия</th><th>Размер в месяц, ₽</th><th>Кому</th></tr></thead>
+        <tbody>
+          <tr><td>Государственная академическая</td><td class="n">2 300</td><td>Бюджет, сессия сдана вовремя на «хорошо» и «отлично»</td></tr>
+          <tr><td>Академическая повышенная</td><td class="n">3 450</td><td>За успехи в учёбе, науке, спорте, общественной или творческой деятельности</td></tr>
+          <tr><td>Государственная социальная</td><td class="n">от 3 448</td><td>Льготные категории по ст. 36 закона № 273-ФЗ, оформляется через деканат</td></tr>
+          <tr><td>Губернатора Краснодарского края</td><td class="n">10 000</td><td>Активистам и волонтёрам с оценками «хорошо» и «отлично», бюджет и платное</td></tr>
+          <tr><td>Главы города Краснодара</td><td class="n">7 000</td><td>За отличную учёбу и научные результаты, регистрация в Краснодаре</td></tr>
+          <tr><td>Президента РФ, приоритетные направления</td><td class="n">7 000</td><td>Без троек за всё время учёбы, научные достижения, конкурсный отбор</td></tr>
+          <tr><td>Фонда Потанина</td><td class="n">25 000</td><td>Только магистрантам 1 курса, конкурс</td></tr>
+        </tbody>
+      </table></div>
+      <p class="note">Размеры по странице «Стипендии и стипендиаты» ФКТиПМ. Минимальный размер социальной стипендии с 1 сентября 2026 года по закону 3 448 ₽, поэтому значение на странице факультета (3 330 ₽) могло устареть. Точные суммы уточняйте в деканате.</p>
+    </div>
+
+    <h3 style="margin:36px 0 14px;font-size:19px">Полезные ссылки</h3>
+    <div class="links">
+      <a href="https://www.kubsu.ru/ru/fktipm/raspisanie" target="_blank" rel="noopener"><b>Расписание занятий</b><span>по группам, на сайте факультета</span></a>
+      <a href="https://www.kubsu.ru/ru/eios" target="_blank" rel="noopener"><b>ЕИОС КубГУ</b><span>электронная среда: курсы, задания, оценки</span></a>
+      <a href="https://www.kubsu.ru/ru/fktipm/novosti-i-obyavleniya" target="_blank" rel="noopener"><b>Новости и объявления</b><span>переносы, собрания, конкурсы</span></a>
+      <a href="https://www.kubsu.ru/ru/fktipm/stipendii-i-stipendiaty" target="_blank" rel="noopener"><b>Стипендии</b><span>положения и списки стипендиатов</span></a>
+      <a href="https://www.kubsu.ru/ru/fktipm/karernye-meropriyatiya-i-trudoustroystvo" target="_blank" rel="noopener"><b>Карьера</b><span>стажировки и трудоустройство</span></a>
+      <a href="https://vk.com/fktipm_kubsu" target="_blank" rel="noopener"><b>ВКонтакте факультета</b><span>vk.com/fktipm_kubsu</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="ai">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">ИИ в подготовке</p>
+      <h2 class="h2">Нейросеть — репетитор, а не шпаргалка</h2>
+      <p class="lead">Российские языковые модели, например GigaChat и YandexGPT в Алисе, бесплатно помогают готовиться к ЕГЭ. Вот как использовать их с пользой.</p>
+    </div>
+    <div class="ai-grid">
+      <div class="uses">
+        <div class="use"><span class="n">01</span><div><h3>Разбор задач по шагам</h3><p>Попросите объяснить решение задачи ЕГЭ по информатике и задать вам похожую, а не выдать готовый ответ.</p></div></div>
+        <div class="use"><span class="n">02</span><div><h3>План подготовки</h3><p>Расскажите модели свои баллы на пробнике и сколько осталось до экзамена — она разложит темы по неделям.</p></div></div>
+        <div class="use"><span class="n">03</span><div><h3>Проверка кода</h3><p>Вставьте свой код на Python и спросите, где ошибка и почему. Так быстрее учатся задачи 24–27.</p></div></div>
+        <div class="use"><span class="n">04</span><div><h3>Выбор направления</h3><p>Опишите, что вам интересно, и попросите сравнить профили факультета. Цифры потом сверяйте с официальным сайтом.</p></div></div>
+      </div>
+      <div>
+        <div class="prompt">
+          <div class="prompt-top"><span>Готовый запрос</span><button class="btn" type="button" id="copy">Скопировать</button></div>
+          <pre id="prompt-text">Ты — репетитор по ЕГЭ по информатике. Мой балл на пробнике — 62, до экзамена 4 месяца. Составь план подготовки по неделям: какие номера заданий разбирать первыми, сколько задач решать в день. После каждой темы давай мне одну задачу и проверяй моё решение, не показывая ответ сразу.</pre>
+          <p class="note" id="copy-msg" role="status" style="color: inherit; opacity: 0.8;"></p>
+        </div>
+        <div class="caution">
+          <h3>Чего не доверять нейросети</h3>
+          <ul>
+            <li>Проходные баллы, даты и количество мест: модели путают годы и выдумывают цифры. Берите их с kubsu.ru.</li>
+            <li>Окончательный ответ в задаче без проверки: модель может ошибиться в вычислениях.</li>
+            <li>Личные данные: не отправляйте паспорт, СНИЛС и номер заявления.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Частые вопросы</p>
+      <h2 class="h2">Коротко о важном</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Можно сдать физику вместо информатики?</summary><p>Только на «Информационную безопасность»: там физика (минимум 41) и информатика (минимум 46) идут на выбор. На остальные пять направлений нужна информатика.</p></details>
+      <details><summary>Есть ли бюджет на «Информационную безопасность»?</summary><p>В 2026 году набор на это направление на факультете шёл только по договорам. Для платного поступления достаточно набрать минимальные баллы.</p></details>
+      <details><summary>Чем отличаются «Прикладная математика» и «Фундаментальная информатика»?</summary><p>В «Прикладной математике и информатике» больше моделирования и прикладных расчётов, есть профиль про цифровую экономику. «Фундаментальная информатика» глубже уходит в теорию и программное обеспечение. На обоих есть профиль по машинному обучению и компьютерному зрению.</p></details>
+      <details><summary>Почему на «Программную инженерию» такой высокий балл?</summary><p>В 2026 году это одно из самых популярных направлений КубГУ: 45,6 заявления на место и проходной 261. Если сумма ниже, подайте заявления и на соседние направления с похожими профилями.</p></details>
+      <details><summary>Как получить +5 баллов от КубГУ?</summary><p>Стать победителем или призёром «Открытой многопрофильной олимпиады» КубГУ или конкурса «Куб знаний». Расписание — на сайтах olymp.kubsu.ru и kub.kubsu.ru.</p></details>
+      <details><summary>Где следить за своим местом в списке летом?</summary><p>В конкурсных списках на сайте КубГУ: раздел «Списки поступающих, ранжированные по баллам». Ссылка — в блоке контактов ниже.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contacts">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Контакты</p>
+      <h2 class="h2">Куда обращаться</h2>
+    </div>
+    <div class="contacts">
+      <div class="box contact">
+        <h3>Приёмная комиссия КубГУ</h3>
+        <dl>
+          <dt>Адрес</dt><dd>Краснодар, ул. Ставропольская, 149, ауд. 134</dd>
+          <dt>Телефон</dt><dd>+7 (861) 219-95-30</dd>
+          <dt>Почта</dt><dd>abitur@kubsu.ru</dd>
+          <dt>Часы</dt><dd>пн–пт 9:00–17:00, перерыв 13:00–13:30</dd>
+        </dl>
+      </div>
+      <div class="box contact">
+        <h3>Деканат ФКТиПМ</h3>
+        <dl>
+          <dt>Адрес</dt><dd>ул. Ставропольская, 149, каб. 130</dd>
+          <dt>Телефон</dt><dd>+7 (861) 219-95-78</dd>
+          <dt>Почта</dt><dd>fpm@kubsu.ru</dd>
+          <dt>ВКонтакте</dt><dd><a href="https://vk.com/fktipm_kubsu">vk.com/fktipm_kubsu</a></dd>
+        </dl>
+      </div>
+    </div>
+    <div class="links">
+      <a href="https://www.kubsu.ru/ru/node/44960">Правила и документы приёма</a>
+      <a href="https://www.kubsu.ru/ru/rangedlist">Конкурсные списки</a>
+      <a href="https://www.kubsu.ru/ru/studlist">Списки зачисленных</a>
+      <a href="https://www.kubsu.ru/ru/abiturient/question">Задать вопрос комиссии</a>
+      <a href="https://olymp.kubsu.ru/">Олимпиады КубГУ</a>
+      <a href="https://kub.kubsu.ru/">«Куб знаний»</a>
+      <a href="https://www.kubsu.ru/ru/node/44203">Целевое обучение</a>
+      <a href="https://www.kubsu.ru/ru/fktipm">Страница факультета</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-line">
+    <a href="https://www.kubsu.ru/ru/abiturient">Официальный сайт КубГУ для абитуриентов</a>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
