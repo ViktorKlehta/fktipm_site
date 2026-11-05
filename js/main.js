@@ -8,7 +8,7 @@
   /* Карточки направлений */
   var list = document.getElementById("dirlist");
   DIRS.forEach(function (d) {
-    var card = el("article", "dir");
+    var card = el("article", "dir"); 
     card.dataset.tags = d.tags.join(" ");
     var top = el("div", "dir-top");
     top.appendChild(el("span", "dir-code", d.code));
