@@ -24,4 +24,4 @@ var DIRS = [
 ];
 
 // Минимальные баллы ЕГЭ
-var MINS = { math: 40, inf: 46, rus: 50 };
+var MINS = { math: 39, inf: 42, rus: 50 };
