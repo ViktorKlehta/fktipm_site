@@ -21,8 +21,8 @@
     var st = el("div", "dir-stats");
     function stat(big, small) { var s = el("div", "stat"); s.appendChild(el("b", null, big)); s.appendChild(el("span", null, small)); st.appendChild(s); }
     if (d.paidOnly) {
-      stat("40", "мин. по математике");
-      stat("41/46", "физика или информатика");
+      stat("39", "мин. по математике");
+      stat("41/42", "физика или информатика");
       stat("50", "мин. по русскому");
     } else {
       stat(d.p2026 != null ? String(d.p2026) : "—", "проходной на бюджет 2026");
@@ -102,7 +102,7 @@
       var r = rows[code], d = r.d, text, cls;
       r.fill.style.width = pct(total) + "%";
       if (d.paidOnly) {
-        var paidFail = s.math < 40 || s.rus < 50 || s.inf < 46;
+        var paidFail = s.math < 39 || s.rus < 50 || s.inf < 42;
         text = paidFail ? "ниже минимума" : "платно: минимум есть";
         cls = paidFail ? "bad" : "info";
       } else if (failed.length) {
